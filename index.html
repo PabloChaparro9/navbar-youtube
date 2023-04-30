@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>NavBar Youtube</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="menu">
+                <aside><i class="bi bi-list"></i></aside>
+                <div class="logo">
+                    <img src="./img/Captura.PNG" alt="logo de YouTube">
+                </div>
+            </div>
+            <div class="searchbar">
+                <i class="bi bi-search searchfocus"></i>
+                <i class="bi bi-search search"></i>
+                <input type="text" name="search" id="search" placeholder="Buscar">
+                <i class="bi bi-mic-fill"></i>
+            </div>
+            <div class="account">
+                <a href="#" class="upload" onclick="accountMenusFadeInOut(upload,uploadContainer,uploadIcon,uploadIconFill)">
+                    <div class="uploadWindow">
+                        <div class="subirVideo">
+                            <i class="bi bi-play-btn"></i><p>Subir video</p>
+                        </div>
+                        <div class="broadcast">
+                            <i class="bi bi-broadcast"></i><p>Transmitir en vivo</p>
+                        </div>
+                    </div>
+                    <i class="bi bi-camera-video" id="camera-video"></i>
+                    <i class="bi bi-camera-video-fill fill"></i>
+                </a>
+                <a href="#" class="notifications" onclick="accountMenusFadeInOut(notifications,notificationsContainer,notificationsIcon,notificationsIconFill)">
+                    <div class="notificationsWindow">
+                        <div class="top">
+                            <p>Notificaciones</p>
+                            <i class="bi bi-gear"></i>
+                        </div>
+                    </div>
+                    <i class="bi bi-bell"></i>
+                    <i class="bi bi-bell-fill fill"></i>
+                </a>
+                <a href="#" class="cuenta" onclick="cuentaMenuFadeInOut(cuenta,cuentaContainer)">
+                    <div class="cuentaWindow">
+                        <div class="acountManagement">
+                            <i class="bi bi-person-fill"></i>
+                            <div>
+                                <p>Usuario</p>
+                                <p>@Usuario</p>
+                            </div>
+                        </div>
+                        <p class="administrarCuenta">Administra tu Cuenta de Google</p>
+                        <div class="cuentaMenus">
+                            <div class="contenedorCuentaMenu">
+                                <i class="bi bi-person-square"></i>
+                                <p>Tu canal</p>
+                            </div>
+                            <div class="contenedorCuentaMenu">
+                                <i class="bi bi-play-btn"></i>
+                                <p>YouTube Studio</p>
+                            </div>
+                            <div class="contenedorCuentaMenu">
+                                <i class="bi bi-people"></i>
+                                <p>Cambiar de cuenta</p>
+                                <i class="bi bi-chevron-right iconoright"></i>
+                            </div>
+                            <div class="contenedorCuentaMenu">
+                                <i class="bi bi-box-arrow-in-right"></i>
+                                <p>Salir</p>
+                            </div>
+                        </div>
+                        <div class="cuentaMenus">
+                            <div class="contenedorCuentaMenu">
+                                <i class="bi bi-coin"></i>
+                                <p>Compras y Membresias</p>
+                            </div>
+                            <div class="contenedorCuentaMenu">
+                                <i class="bi bi-person-gear"></i>
+                                <p>Tus datos en YouTube</p>
+                            </div>
+                        </div>
+                        <div class="cuentaMenus">
+                            <div class="contenedorCuentaMenu">
+                                <i class="bi bi-moon"></i>
+                                <p>Aspecto:Tema del dispositivo</p>
+                                <i class="bi bi-chevron-right iconoright"></i>
+                            </div>
+                            <div class="contenedorCuentaMenu">
+                                <i class="bi bi-translate"></i>
+                                <p>Idioma: Español latinoamericano</p>
+                                <i class="bi bi-chevron-right iconoright"></i>
+                            </div>
+                            <div class="contenedorCuentaMenu">
+                                <i class="bi bi-shield-x"></i>
+                                <p>Modo restringido: desactivado</p>
+                                <i class="bi bi-chevron-right iconoright"></i>
+                            </div>
+                            <div class="contenedorCuentaMenu">
+                                <i class="bi bi-globe2"></i>
+                                <p>Ubicacion: Argentina</p>
+                                <i class="bi bi-chevron-right iconoright"></i>
+                            </div>
+                            <div class="contenedorCuentaMenu">
+                                <i class="bi bi-keyboard"></i>
+                                <p>Convinacion de teclas</p>
+                            </div>
+                        </div>
+                        <div class="cuentaMenus">
+                            <div class="contenedorCuentaMenu">
+                                <i class="bi bi-gear"></i>
+                                <p>Configuracion</p>
+                            </div>
+                        </div>
+                        <div class="cuentaMenu">
+                            <div class="contenedorCuentaMenu">
+                                <i class="bi bi-question-circle"></i>
+                                <p>Ayuda</p>
+                            </div>
+                            <div class="contenedorCuentaMenu">
+                                <i class="bi bi-chat-left-dots-fill"></i>
+                                <p>Enviar comentarios</p>
+                            </div>
+                        </div>
+                    </div>
+                    <i class="bi bi-person-fill"></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <main>
+    </main>
+    <footer></footer>
+    <script src="./js/script.js"></script>
+</body>
+</html>
