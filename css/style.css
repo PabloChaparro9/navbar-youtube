@@ -19,6 +19,7 @@
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
 }
+/* Header */
 a{
     text-decoration: none;
 }
@@ -59,6 +60,13 @@ nav{
     display: flex;
     gap: 5px;
 }
+.logo span{
+    font-size: 10px;
+    font-weight: normal;
+    color: var(--scrollbar-color);
+    margin-top: -6px;
+    margin-left: -1px;
+}
 .searchbar{
     display: flex;
     gap: 65px;
@@ -68,18 +76,25 @@ nav{
     position: relative;
     background-color: var(--bg-color);
 }
-.bi-mic-fill{
-    font-size: 16px;
+.mic{
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
+    background-color: var(--search-bar-btn);
+    height: 24px;
+    width: 24px;
+}
+.mic-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-left: 6px;
     background-color: var(--search-bar-btn);
     height: 40px;
     width: 40px;
+    border-radius: 50%;
 }
-.bi-mic-fill:hover{
+.mic-container:hover{
     background-color: var(--search-bar-btn-hover);
     cursor: pointer;
 }
@@ -91,14 +106,14 @@ input{
     width: 541px;
     height: 100%;
     padding-left: 16px;
-    margin-left: 12px;
+    margin-left: 11px;
     border: 1px var(--search-border-color) solid;
     z-index: 2;
 }
 input:focus{
     margin-left: -20px;
     width: 572px;
-    padding-left: 48px;
+    padding-left: 47px;
     outline: none;
     border: 1px var(--search-bar-input-hover) solid;
 }
@@ -107,8 +122,8 @@ input:focus{
     z-index: 3;
     font-size: 14px;
 }
-.searchbar:focus-within .bi-mic-fill{
-    margin-left: 7px;
+.searchbar:focus-within .mic-container{
+    margin-left: 6px;
 }
 input:focus{
     border: 1px var(--search-bar-input-hover) solid;
@@ -126,7 +141,7 @@ input:focus{
     align-items: center;
     justify-content: center;
     font-weight: lighter;
-    right: 54px;
+    right: 55px;
     background-color: var(--search-bar-btn-hover);
     height: 100%;
     width: 55px;
@@ -156,15 +171,15 @@ input:focus{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     margin-right: 10px;
 }
-.account .bi-camera-video, .bi-bell, .bi-person-fill{
+.account .camera, .bell, .bi-person-fill{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 40px;
-    width: 40px;
+    height: 25px;
+    width: 25px;
 }
 .bi-person-fill{
     background-color: var(--font-color);
@@ -173,7 +188,7 @@ input:focus{
     border-radius: 50%;
     height: 30px;
     width: 30px;
-    margin-left: 12px;
+    margin-left: 15px;
     margin-right: 10px;
     cursor: pointer;
 }
@@ -192,13 +207,21 @@ input:focus{
     width: 40px;
     cursor: pointer;
 }
-.account .upload .bi-camera-video:hover, .bi-bell:hover{
+.account .upload .camera-account-container:hover, .notifications-account-container:hover{
     transition: ease-in-out;
     border-radius: 50%;
     background-color: var(--search-bar-btn-hover);
     height: 40px;
     width: 40px;
     cursor: pointer;
+}
+.camera-account-container,.notifications-account-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
 }
 body::-webkit-scrollbar{
     background-color: var(--bg-color);
@@ -223,28 +246,36 @@ body::-webkit-scrollbar-thumb{
     content: "";
     position: absolute;
     background-color: var(--search-bar-btn-hover);
-    top: 38px;
+    top: 40px;
     right: 0px;
     width: 205px;
     height: 95px;
-    border-radius: 10px;
+    border-radius: 12px;
     cursor: default;
 }
 .subirVideo, .broadcast{
     display: flex;
     align-items: center;
-    gap: 18px;
-    padding-left: 18px;
+    gap: 16px;
+    padding-left: 15px;
     height: 40px;
     cursor: pointer;
+}
+.subirVideo p, .broadcast p{
+    font-size: 14px;
+}
+.subirVideo p{
+    padding-bottom: 1px;
 }
 .subirVideo{
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+    margin-top: 2px;
 }
 .broadcast{
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    margin-top: -14px;
 }
 .subirVideo:hover, .broadcast:hover{
     background-color: var(--scrollbar-color-hover);
@@ -275,7 +306,7 @@ body::-webkit-scrollbar-thumb{
     padding-right: 20px;
     border-bottom: 1px var(--scrollbar-color-hover) solid;
 }
-.top i{
+.top svg{
     cursor: pointer;
 }
 .top p{
@@ -291,10 +322,10 @@ body::-webkit-scrollbar-thumb{
     content: "";
     position: absolute;
     background-color: var(--search-bar-btn-hover);
-    top: 33px;
+    top: 32px;
     right: -5px;
     width: 300px;
-    height: 748px;
+    height: 749px;
     border-radius: 10px;
     cursor: default;
 }
@@ -307,7 +338,7 @@ body::-webkit-scrollbar-thumb{
 .acountManagement{
     display: flex;
     padding: 16px;
-    padding-left: 5px;
+    padding-left: 1px;
 }
 .acountManagement div p{
     display: flex;
@@ -319,7 +350,7 @@ body::-webkit-scrollbar-thumb{
     text-align: right;
     font-size: 14px;
     padding-right: 30px;
-    margin-top: -8px;
+    margin-top: -7px;
     padding-bottom: 18px;
     color: var(--search-bar-input-hover);
     border-bottom: 1px var(--scrollbar-color-hover) solid;
@@ -340,20 +371,52 @@ body::-webkit-scrollbar-thumb{
     align-items: center;
     position: relative;
     height: 40px;
-    padding-left: 19px;
-    gap: 19px;
+    padding-left: 16px;
+    gap: 16px;
 }
 .contenedorCuentaMenu:hover{
     background-color: var(--scrollbar-color-hover);
     cursor: pointer;
 }
-.contenedorCuentaMenu i{
-    font-size: 18px;
+.contenedorCuentaMenu svg{
+    height: 24px;
+    width: 24px;
 }
 .iconoright{
     position: absolute;
-    right: 20px;
+    right: 16px;
+}
+.contenedorCuentaMenu .iconoright2{
+    position: absolute;
+    right: 16px;
+    width: 16px;
+    height: 16px;
 }
 .contenedorCuentaMenu p{
     font-size: 14px;
+}
+/* Main */
+main{
+    margin: 25px 5%;
+}
+main img{
+    width: 1283px;
+    height: 723px;
+}
+select{
+    background-color: var(--scrollbar-color-hover);
+}
+option{
+    display: flex;
+    position: relative;
+    background-color: var(--scrollbar-color-hover);
+}
+.yt-icon{
+    display: flex;
+    fill: currentColor;
+    width: 24px;
+    height: 24px;
+}
+#bell-fill,#camera-fill{
+    display: none;
 }
