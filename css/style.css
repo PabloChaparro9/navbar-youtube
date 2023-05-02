@@ -23,7 +23,7 @@
 a{
     text-decoration: none;
 }
-nav img{
+nav svg{
     cursor: pointer;
 }
 main{
@@ -40,8 +40,17 @@ main{
 body{
     background-color: var(--bg-color);
 }
-.bi-youtube{
-    color: #FF0000;
+.menu-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    margin: 0 -8px;
+    border-radius: 50%;
+}
+.menu-btn:hover{
+    background-color: var(--search-bar-btn-hover);
 }
 nav{
     display: flex;
