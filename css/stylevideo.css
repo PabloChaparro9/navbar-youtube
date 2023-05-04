@@ -1,0 +1,43 @@
+.video-botones{
+    display: flex;
+}
+.likes{
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+.thumb-up,.thumbdown{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    width: 25px;
+}
+.thumb-fill{
+    display: none;
+}
+.video{
+    display: flex;
+    flex-direction: column;
+    width: 74.5%;
+    height: 723px;
+}
+.descripcion{
+    display: flex;
+    justify-content: space-between;
+}
+.suscripcion{
+    display: flex;
+    flex-direction: column;
+}
+.canal{
+    display: flex;
+}
+.canal-info{
+    display: flex;
+}
+.video-btn{
+    display: flex;
+    height: 50px;
+    align-items: center;
+}
