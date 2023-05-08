@@ -10,31 +10,34 @@ const cuenta = document.querySelector(".cuenta")
 const cuentaContainer = document.querySelector(".cuentaWindow")
 
 const accountMenusFadeInOut = (div,div2,icon1,icon2)=>{
-    div.addEventListener("focusin", event =>{
-        event = div2
-        event.style.display="flex";
+    div.addEventListener("focusin", () =>{
+        div2.style.display="flex";
         icon1.style.display="none";
         icon2.style.display="flex";
     })
-
-    div.addEventListener("focusout", event =>{
-        event = div2
-        event.style.display="none";
+    div.addEventListener("focusout", () =>{
+        div2.style.display="none";
         icon1.style.display="flex";
         icon2.style.display="none";
     })
 }
-
 const cuentaMenuFadeInOut = (div,divcontainer) =>{
-    div.addEventListener("focusin", event =>{
-        event = divcontainer
-        event.style.display="flex";
+    div.addEventListener("focusin", () =>{
+        divcontainer.style.display="flex";
     })
-    div.addEventListener("focusout", event =>{
-        event = divcontainer
-        event.style.display="none";
+    div.addEventListener("focusout", () =>{
+        divcontainer.style.display="none";
     })
 }
+upload.addEventListener("onclick", ()=>{
+    accountMenusFadeInOut(upload,uploadContainer,uploadIcon,uploadIconFill)
+})
+notifications.addEventListener("onclick",()=>{
+    accountMenusFadeInOut(notifications,notificationsContainer,notificationsIcon,notificationsIconFill)
+})
+cuenta.addEventListener("onclick",()=>{
+    cuentaMenuFadeInOut(cuenta,cuentaContainer)
+})
 accountMenusFadeInOut(upload,uploadContainer,uploadIcon,uploadIconFill)
 accountMenusFadeInOut(notifications,notificationsContainer,notificationsIcon,notificationsIconFill)
 cuentaMenuFadeInOut(cuenta,cuentaContainer)
