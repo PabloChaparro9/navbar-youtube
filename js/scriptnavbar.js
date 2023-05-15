@@ -29,13 +29,13 @@ const cuentaMenuFadeInOut = (div,divcontainer) =>{
         divcontainer.style.display="none";
     })
 }
-upload.addEventListener("onclick", ()=>{
+upload.addEventListener("click", ()=>{
     accountMenusFadeInOut(upload,uploadContainer,uploadIcon,uploadIconFill)
 })
-notifications.addEventListener("onclick",()=>{
+notifications.addEventListener("click",()=>{
     accountMenusFadeInOut(notifications,notificationsContainer,notificationsIcon,notificationsIconFill)
 })
-cuenta.addEventListener("onclick",()=>{
+cuenta.addEventListener("click",()=>{
     cuentaMenuFadeInOut(cuenta,cuentaContainer)
 })
 accountMenusFadeInOut(upload,uploadContainer,uploadIcon,uploadIconFill)

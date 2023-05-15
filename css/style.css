@@ -10,13 +10,15 @@
     --scrollbar-color: #AAAAAA;
     --scrollbar-color-hover: #595959;
     --search-border-color: #323030;
+    --bar-width: 240px;
+    --mini-bar-element-width: 64px;
+    --mini-bar-element-height: 74px;
 }
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     color: var(--font-color);
-    font-size: 16px;
     font-family: 'Roboto', sans-serif;
 }
 /* Header */
@@ -52,6 +54,7 @@ nav{
     align-items: center;
     padding: 7.51px 1%;
     background-color: var(--bg-color);
+    z-index: 2;
 }
 .menu{
     display: flex;
@@ -104,6 +107,7 @@ nav{
 }
 input{
     background-color: var(--search-bar-color);
+    font-size: 16px;
     border-radius: 30px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
@@ -241,7 +245,7 @@ body::-webkit-scrollbar-thumb{
     background-color: var(--scrollbar-color);
     border-radius: 10px;
 }
-.upload, .notifications, .cuenta, .menu{
+.upload, .notifications, .cuenta, .menu-btn{
     position: relative;
     background-color: #0f0f0f00;
     border: none;
@@ -420,20 +424,19 @@ main img{
     display: none;
 }
 .icon-container{
-    padding-top: 1px;
-    height: 25px;
+    height: 24px;
     width: 24px;
 }
 .guide-content{
     background-color: var(--bg-color);
-    width: 237px;
-    height: 94vh;
+    width: var(--bar-width);
+    height: 95vh;
     position: fixed;
     top: 55px;
     left: 0;
-    margin: 0;
     overflow: scroll;
     overflow-y: auto;
+    z-index: 2;
 }
 .guide-content::-webkit-scrollbar{
     display: none;
@@ -453,10 +456,8 @@ main img{
 }
 .section-items{
     width: 100%;
-    padding: 12px;
-    padding-right: 10px;
+    padding: 12px 10px 12px 12px;
     max-width: 225px;
-    justify-content: center;
     border-bottom: 1px var(--search-border-color) solid;
 }
 .guide-item{
@@ -471,18 +472,18 @@ main img{
 .guide-item:hover{
     background-color: var(--search-bar-btn-hover);
 }
-.guide-item p{
+.guide-item{
     font-size: 14px;
 }
 .misSuscripciones p{
     font-size: 14px;
-    padding: 4px 10px 0 10px;
     line-height: 20px;
 }
 .misSuscripciones{
     display: flex;
     flex-direction: column;
     align-items: left;
+    padding: 16px 32px;
 }
 .login-btn{
     display: flex;
@@ -491,8 +492,7 @@ main img{
     border-radius: 30px;
     width: 108px;
     height: 36px;
-    padding: 12px 0 12px 9px;
-    margin: 12px 0 5px 20px;
+    padding-left: 7px;
     color: var(--search-bar-input-hover);
     cursor: pointer;
 }
@@ -504,6 +504,17 @@ main img{
     font-weight: 500;
     padding-left: 6px;
     padding-top: 0;
+}
+.login{
+    flex-direction: column;
+    align-items: start;
+    padding: 0;
+    gap: 10px;
+    width: 180px;
+    height: auto;
+}
+.login:hover{
+    background-color: var(--bg-color);
 }
 .icon-container svg{
     fill: var(--search-bar-input-hover);
@@ -535,4 +546,95 @@ main img{
 .section-final{
     border-bottom: none;
     padding: 0;
+}
+.miniguidecontent{
+    width: 74px;
+    padding-top: 4px;
+}
+.minibar{
+    border-bottom: none;
+    padding: 0px 10px 0px 4px;
+}
+.minibarelement{
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+    font-size: 10px;
+    gap: 5px;
+    width: var(--mini-bar-element-width);
+    height: var(--mini-bar-element-height);
+}
+.ocultar{
+    display: none;
+}
+.contenido-container{
+    position:absolute;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    top: 65px;
+    left:240px;
+    z-index: 1;
+    padding: 3.7% 4.6%;
+}
+.video-item{
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+.detalles{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.detalles h3{
+    font-size: 16px;
+    font-weight: bold;
+}
+.detalles p{
+    font-size: 12px;
+    color: var(--scrollbar-color);
+}
+.contenedorvideo{
+    position: relative;
+    width: 360px;
+    height: 202px;
+    border-radius: 10px;
+}
+#icon-mostrar, #text-mostrar{
+    display: none;
+}
+.video-overlay{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1F4960c0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    bottom: -1px;
+}
+.video-overlay-hover{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 203px;
+    display: flex;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+}
+.video-overlay-hover:hover{
+    background-color: #00000080;
+}
+.video-overlay-hover p{
+    font-size: 12px;
+    font-weight: bold;
+}
+.contenedorvideo img{
+    border-radius: 10px;
 }
